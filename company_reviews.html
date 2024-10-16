@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa; 
+        }
+        header {
+            background: #4CAF50;; 
+            color: #ffffff; 
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none; 
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff; 
+            text-decoration: none;
+        }
+        h2 {
+            color: #000000; 
+        }
+        h3 {
+            color: #4CAF50; 
+        }
+        .content {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        form {
+            margin-top: 20px;
+            padding: 40px;
+            background: #eef; 
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+        }
+        label {
+            font-weight: bold; 
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%; 
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px; 
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Portal - Company Reviews</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="company_reviews.html">Company Reviews</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Company Reviews</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Rating</th>
+                    <th>Review</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Techolutions</td>
+                    <td>4.5/5</td>
+                    <td>Great place to work, flexible hours and a great team environment.</td>
+                </tr>
+                <tr>
+                    <td>Creagency</td>
+                    <td>4/5</td>
+                    <td>Creative atmosphere with plenty of opportunities to grow your skills.</td>
+                </tr>
+                <tr>
+                    <td>Markeaders</td>
+                    <td>3.5/5</td>
+                    <td>Fast-paced work environment, can be stressful but rewarding.</td>
+                </tr>
+                <tr>
+                    <td>Dasights</td>
+                    <td>4.8/5</td>
+                    <td>Innovative company with cutting-edge technology and excellent management.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Add Your Review</h3>
+        <form action="submit_review.html" method="POST" style="margin:15px;">
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+</body>
+</html>
